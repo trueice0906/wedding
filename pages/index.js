@@ -1,5 +1,5 @@
 import Navbar from '../component/navbar/navbar'
-import HomePage from '../component/homePage/homepage';
+import HomePage from '../component/homepage/homepage';
 import Invitation from '../component/invitation/invitation';
 import OurStory from '../component/ourStory/ourStory';
 import Rsvp from '../component/rsvp/rsvp';

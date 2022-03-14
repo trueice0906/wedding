@@ -2,7 +2,6 @@ import Image from "next/image";
 import CountDownTimer from "../countdownTimer/countdownTimer";
 import backgroundImg from "../../assets/image/background.jpg";
 import style from "./homepage.module.css";
-import BGImage from "../bgImage/bgImage";
 
 export default function HomePage() {
     return (
