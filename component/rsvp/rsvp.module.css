@@ -1,0 +1,89 @@
+.rsvp__section{
+    height: 100vh;
+}
+
+.rsvp__container{
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    padding: 4rem 0;
+}
+
+.rsvp__leftBar{
+    width: 65%;
+    padding: 5rem;
+ 
+}
+
+.rsvp__rightBar{
+    width: 35%;
+    padding: 5rem 3rem;
+  
+}
+
+.rsvp__formTitle {
+    margin-bottom: 2rem;
+}
+
+.rsvp__formTitle h3{
+  font-size: 3rem;
+
+  margin: 0;
+}
+
+.rsvp__form{
+    width: 80%;
+}
+
+.rsvp__inputWrapper{
+    margin-bottom: 1.5rem;
+}
+
+.rsvp__inputWrapper p{
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.rsvp__venueDetail{
+    border-radius: 0.2rem;
+    text-align:center;
+    padding: 1.5rem 1.5rem;
+    background-color: #E7B798;
+}
+
+.rsvp__venueDetail p{
+    font-size: 1.2rem;
+}
+
+.rsvp__register__button{
+    cursor: pointer;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    background-color: #E7B798;
+    font-family: 'Linden Hill', serif;
+    font-size: 1rem;
+    color: #72541a;
+}
+
+.rsvp__register__button:hover {
+    background-color: #72541a;
+    color: #E7B798;
+
+}
+
+.rsvp__inputBar{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px rgb(153, 153, 153) solid;
+}
+
+.rsvp__errorMessage{
+    color: red;
+    margin: 0 0 1rem 0;
+}
+
+.rsvp__successMessage{
+    color: green;
+    margin: 0 0 1rem 0;
+}

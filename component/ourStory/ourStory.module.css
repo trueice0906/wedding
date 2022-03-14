@@ -1,0 +1,36 @@
+.ourStory__wrapper{
+    position: relative;
+}
+
+.ourStoryBackgroundImg{
+    z-index: -1;
+}
+
+.ourStory__container{
+   padding: 5rem 5rem 1.5rem 5rem;
+   text-align: center;
+}
+
+.ourStory__title h1{
+    font-size: 2rem;
+}
+
+.ourStory__para{
+    padding: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.ourStory__para p {
+    font-size: 1.5rem;
+}
+
+.ourStory__imgCard{
+    margin: auto;
+    width: 600px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.ourStory__coupleImg{
+    z-index: -1;
+}

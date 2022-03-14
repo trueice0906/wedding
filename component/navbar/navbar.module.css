@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Linden+Hill:ital@1&display=swap');
+.navbarWrapper {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background-color: #FEFDFA;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.navbar {
+    height: 100%;
+    margin: 0px;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li{
+    list-style-type: none;
+    display: inline;
+    z-index: 2;
+    margin: 6rem;
+    font-size: 1.4rem;
+}
+
+.navbar__listText {
+    color: #72541a;
+}
+
+.navbar__listText:hover {
+    color: black;
+}
