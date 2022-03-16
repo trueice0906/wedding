@@ -47,25 +47,11 @@ export default function ImageSlide() {
             let url = await getDownloadURL(imageRef);
             return url;
         })
- 
-        
         const allImages = await Promise.all(imagesPromises);
-
         return allImages;
-        // listAll(listRef)
-        // .then((res)=> {
-        //     res.items.forEach((imageRef) => {
-        //         getDownloadURL(imageRef)
-        //             .then((url) => {
-        //                 setAllImages((allImages) => [...allImages, url])
-        //             })
-        //     })
-        // })
-        // .catch(function(error) {
-        //     console.log(error)
-        // })
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=> {
         const images = await getImagesFromFirebase();
         setAllImages(images);
