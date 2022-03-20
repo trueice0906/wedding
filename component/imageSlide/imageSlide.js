@@ -9,8 +9,9 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick';
 import { useState,useEffect } from 'react';
-import galleryPhotos from "../../galleryPhotos/galleryPhotos.json";
 // import { getStorage, listAll, ref, getDownloadURL } from 'firebase/storage';
+import galleryPhotos from "../../galleryPhotos/galleryPhotos.json";
+
 
 function NextArrow(props) {
     const { onClick } = props;
@@ -40,48 +41,29 @@ export default function ImageSlide() {
 
     // const [allImages, setAllImages] = useState([])
     
-    // const getImagesFromFirebase = async () => {
-    //     const storage = getStorage();
-    //     const listRef = ref(storage,'wedding-images');
-    //     const res = await listAll(listRef);
-    //     const items = res.items
-    //     const imagesPromises = items.map(async imageRef => {
-    //         let url = await getDownloadURL(imageRef);
-    //         return url;
-    //     })
+    const getImagesFromFirebase = async () => {
+        const storage = getStorage();
+        const listRef = ref(storage,'wedding-images');
+        const res = await listAll(listRef);
+        const items = res.items
+        const imagesPromises = items.map(async imageRef => {
+            let url = await getDownloadURL(imageRef);
+            return url;
+        })
  
-        
-    //     const allImages = await Promise.all(imagesPromises);
-
-    //     return allImages;
-        // listAll(listRef)
-        // .then((res)=> {
-        //     res.items.forEach((imageRef) => {
-        //         getDownloadURL(imageRef)
-        //             .then((url) => {
-        //                 setAllImages((allImages) => [...allImages, url])
-        //             })
-        //     })
-        // })
-        // .catch(function(error) {
-        //     console.log(error)
-        // })
-    // }
+        const allImages = await Promise.all(imagesPromises);
+        return allImages;
+    }
 
     // useEffect(async ()=> {
     //     const images = await getImagesFromFirebase();
     //     setAllImages(images);
     // },[])
 
-    // useEffect(()=> {
-    //   setAllImages(galleryPhotos)
-    // },[])
-
     useEffect(() => {
         setNav1(slider1);
         setNav2(slider2);
     })
-    // console.log(allImages)
 
     const settingMain = {
         slidesToShow: 1,
@@ -133,27 +115,6 @@ export default function ImageSlide() {
     return (
 
             <div className={style.imageSlide__container}>
-                
-                 {/* <div className={style.imageSlide__iconContainer}>
-                    <button 
-                        className={style.imageSlide__iconWrapper}
-                        onClick={sliderRef?.slickPrev}
-                    >
-                        <FontAwesomeIcon       
-                            className={style.imageSlide__caretIcon}         
-                            icon={faAngleLeft}    
-                        />
-                    </button>
-                    <button 
-                        className={style.imageSlide__iconWrapper}
-                        onClick={sliderRef?.slickNext}
-                    >
-                        <FontAwesomeIcon
-                            className={style.imageSlide__caretIcon}
-                            icon={faAngleRight}                    
-                        />
-                    </button> 
-                </div>  */}
 
                 <Slider 
                     ref={slider => (setSlider1(slider))}

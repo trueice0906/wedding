@@ -39,4 +39,8 @@
     .ourStory__imgCard {
         display: none;
     }
+
+    .ourStory__para p{
+        font-size: 2rem;
+    }
 }

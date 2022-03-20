@@ -74,9 +74,9 @@
     .navbar__mobileMenuToggle span
         {
         display: flex;
-        width: 29px;
-        height: 2px;
-        margin-bottom: 5px;
+        width: 40px;
+        height: 3px;
+        margin-bottom: 8px;
         position: relative;
         background: black;
         border-radius: 3px;

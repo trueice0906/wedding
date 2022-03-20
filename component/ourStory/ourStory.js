@@ -1,7 +1,7 @@
 import style from "./ourStory.module.css";
 import Image from "next/image";
 import OurStoryBackgroundImg from "../../assets/image/light-background.png"
-import coupleImg from "../../assets/image/ourStoryImg.jpg"
+import coupleImg from "../../assets/image/jy-ylinparis.jpeg"
 
 export default function OurStory() {
     return (
