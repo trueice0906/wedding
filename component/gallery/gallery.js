@@ -1,10 +1,10 @@
 
 import ImageSlide from "../imageSlide/imageSlide";
 
-export default function Gallery({imageUrls}) {
+export default function Gallery() {
     return (
         <section id="gallery">       
-            <ImageSlide imageUrls={imageUrls}/>     
+            <ImageSlide />     
         </section>
     )
 }

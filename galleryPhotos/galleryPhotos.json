@@ -1,10 +1,10 @@
 [
-    { "url": "/../public/images/1.jpg" },
-    { "url": "/../public/images/5.jpg" },
-    { "url": "/../public/images/9.jpg" },
-    { "url": "/../public/images/15.jpg" },
-    { "url": "/../public/images/18.jpg" },
-    { "url": "/../public/images/20.jpg" },
-    { "url": "/../public/images/24.jpg" }
+    { "url": "https://res.cloudinary.com/trueice/image/upload/v1647764280/wedding/8_k6wnux.jpg" },
+    { "url": "https://res.cloudinary.com/trueice/image/upload/v1647764280/wedding/9_z9rxjd.jpg" },
+    { "url": "https://res.cloudinary.com/trueice/image/upload/v1647764280/wedding/12_pflfzw.jpg" },
+    { "url": "https://res.cloudinary.com/trueice/image/upload/v1647764280/wedding/10_fdfbfe.jpg" },
+    { "url": "https://res.cloudinary.com/trueice/image/upload/v1647764279/wedding/5_pp0heg.jpg" },
+    { "url": "https://res.cloudinary.com/trueice/image/upload/v1647764279/wedding/7_fwnybn.jpg" },
+    { "url": "https://res.cloudinary.com/trueice/image/upload/v1647764279/wedding/3_b3uoxc.jpg" }
 ]
 

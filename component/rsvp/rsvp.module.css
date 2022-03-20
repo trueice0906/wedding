@@ -38,7 +38,7 @@
 }
 
 .rsvp__inputWrapper p{
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 0 0 0.5rem 0;
 }
 
@@ -74,6 +74,7 @@
 .rsvp__inputBar{
     width: 100%;
     padding: 0.5rem 1rem;
+    font-size: 1.3rem;
     border: 1px rgb(153, 153, 153) solid;
 }
 

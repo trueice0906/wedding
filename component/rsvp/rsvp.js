@@ -8,6 +8,7 @@ const Rsvp = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [paxNo, setPaxNo] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
 
@@ -28,7 +29,7 @@ const Rsvp = () => {
                 // if email not exists ,create data in firestore
                 if (!snapShot.exists()) {                    
                     await setDoc(doc(db,"guestList",email),{
-                         name,email                         
+                         name,email, paxNo                        
                      })
                      setSuccessMessage("RSVP successfully.We'll see you in the wedding !")
                 } else {
@@ -56,6 +57,12 @@ const Rsvp = () => {
                             <p>Name</p>
                             <input name="name" placeholder="Name" className={styles.rsvp__inputBar} onChange={e => setName(e.target.value)}/>
                         </div>
+
+                        <div className={styles.rsvp__inputWrapper}>
+                            <p>Number attending</p>
+                            <input type="number" name="pax" placeholder="1" className={styles.rsvp__inputBar} onChange={e => setPaxNo(e.target.value)} min="1"/>
+                        </div>
+
                         <div className={styles.rsvp__inputWrapper}>
                             <p>Email</p>
                             <input name="email" placeholder="Email address" className={styles.rsvp__inputBar} onChange={e => setEmail(e.target.value)}/>
