@@ -44,6 +44,7 @@
     color: black;
 }
 
+
 /* media query */
 
 @media (max-width: 678px) {
@@ -157,3 +158,4 @@
         margin: 6rem 3.5rem;
     }
 }
+

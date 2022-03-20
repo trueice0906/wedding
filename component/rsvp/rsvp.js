@@ -22,6 +22,7 @@ const Rsvp = () => {
         } else {
             try {
                 // check if email exist in firebase firestore
+    
                 const guestDocRef = doc(db,"guestList",email);
                 const snapShot = await getDoc(guestDocRef);
                 // if email not exists ,create data in firestore
