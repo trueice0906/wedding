@@ -36,7 +36,7 @@ const CountDownTimer = () => {
     const { days, hours, mins, secs} = timeLeft
 
     return (
-        <div className={`${style.countDown__container} hidden`}>
+        <div className={`${style.countDown__container}`}>
             <div className={style.countDown__wrapper}>
                 <div className={style.countDown__title}>Our Wedding Day</div>
                 

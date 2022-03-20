@@ -11,14 +11,12 @@
 
 .rsvp__leftBar{
     width: 65%;
-    padding: 5rem;
- 
+    padding: 5rem 0 0 5rem;
 }
 
 .rsvp__rightBar{
     width: 35%;
-    padding: 5rem 3rem;
-  
+    padding: 5rem 5rem 0 0;
 }
 
 .rsvp__formTitle {
@@ -53,6 +51,7 @@
 
 .rsvp__venueDetail p{
     font-size: 1.2rem;
+    margin: 1rem;
 }
 
 .rsvp__register__button{
@@ -86,4 +85,52 @@
 .rsvp__successMessage{
     color: green;
     margin: 0 0 1rem 0;
+}
+
+/* media query */
+
+@media (max-width: 678px) {
+    .rsvp__container{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .rsvp__formTitle{
+        text-align: center;
+    }
+
+    .rsvp__formTitle h3{
+        font-size: 3rem;
+    }
+
+    .rsvp__inputWrapper p{
+        font-size: 1.5rem;
+    }
+
+    .rsvp__inputBar{
+        font-size: 1.5rem;
+    }
+
+    .rsvp__leftBar{
+        width: 100%;
+        padding: 2rem 5rem;
+    }
+
+    .rsvp__rightBar{
+     display: none;
+    }
+
+    .rsvp__form{
+        width: 100%;
+    }
+
+    .rsvp__buttonWrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .rsvp__register__button{
+        font-size: 1.5rem;
+    }
 }

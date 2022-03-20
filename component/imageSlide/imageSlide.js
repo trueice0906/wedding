@@ -9,7 +9,8 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick';
 import { useState,useEffect } from 'react';
-import { getStorage, listAll, ref, getDownloadURL } from 'firebase/storage';
+import galleryPhotos from "../../galleryPhotos/galleryPhotos.json";
+// import { getStorage, listAll, ref, getDownloadURL } from 'firebase/storage';
 
 function NextArrow(props) {
     const { onClick } = props;
@@ -31,36 +32,56 @@ function NextArrow(props) {
 
 export default function ImageSlide() {
 
+
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     const [slider1, setSlider1] = useState(null);
     const [slider2, setSlider2] = useState(null);
 
-    const [allImages, setAllImages] = useState([])
+    // const [allImages, setAllImages] = useState([])
     
-    const getImagesFromFirebase = async () => {
-        const storage = getStorage();
-        const listRef = ref(storage,'wedding-images');
-        const res = await listAll(listRef);
-        const items = res.items
-        const imagesPromises = items.map(async imageRef => {
-            let url = await getDownloadURL(imageRef);
-            return url;
-        })
-        const allImages = await Promise.all(imagesPromises);
-        return allImages;
-    }
+    // const getImagesFromFirebase = async () => {
+    //     const storage = getStorage();
+    //     const listRef = ref(storage,'wedding-images');
+    //     const res = await listAll(listRef);
+    //     const items = res.items
+    //     const imagesPromises = items.map(async imageRef => {
+    //         let url = await getDownloadURL(imageRef);
+    //         return url;
+    //     })
+ 
+        
+    //     const allImages = await Promise.all(imagesPromises);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(async ()=> {
-        const images = await getImagesFromFirebase();
-        setAllImages(images);
-    },[])
+    //     return allImages;
+        // listAll(listRef)
+        // .then((res)=> {
+        //     res.items.forEach((imageRef) => {
+        //         getDownloadURL(imageRef)
+        //             .then((url) => {
+        //                 setAllImages((allImages) => [...allImages, url])
+        //             })
+        //     })
+        // })
+        // .catch(function(error) {
+        //     console.log(error)
+        // })
+    // }
+
+    // useEffect(async ()=> {
+    //     const images = await getImagesFromFirebase();
+    //     setAllImages(images);
+    // },[])
+
+    // useEffect(()=> {
+    //   setAllImages(galleryPhotos)
+    // },[])
 
     useEffect(() => {
         setNav1(slider1);
         setNav2(slider2);
     })
+    // console.log(allImages)
 
     const settingMain = {
         slidesToShow: 1,
@@ -139,12 +160,12 @@ export default function ImageSlide() {
                     {...settingMain}
                     >
 
-                    {allImages.map((imgUrl) => {
+                    {galleryPhotos.map((imgUrl) => {
                         return(
                         // eslint-disable-next-line react/jsx-key
                         <div className={style.imageSlider__imgWrapper}>
                             <Image
-                                src={imgUrl}
+                                src={imgUrl.url}
                                 alt="galleryImg"
                                 objectFit="contain"
                                 layout='fill'
@@ -159,12 +180,12 @@ export default function ImageSlide() {
                         {...settingThumbs}
                         ref={slider => setSlider2(slider)}           
                     >
-                        {allImages.map((imgUrl) => {
+                        {galleryPhotos.map((imgUrl) => {
                             return(
                                 // eslint-disable-next-line react/jsx-key
                                 <div className={style.thumbnail__cardWrapper}>
                                     <Image
-                                        src={imgUrl}
+                                        src={imgUrl.url}
                                         alt="gallery-photo"  
                                         layout="fill"
                                         objectFit="contain"
