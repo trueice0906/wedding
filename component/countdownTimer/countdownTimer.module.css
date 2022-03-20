@@ -55,10 +55,8 @@
 }
 
 /* Media query */
-/* @media (min-width: 1025px) { */
-    /* .countDown__container {
-        position: absolute;
-        top: 400px;
-        width: 100%;    
+@media (max-width: 678px) {
+    .countDown__container{
+        display: none;
     }
-} */
+}

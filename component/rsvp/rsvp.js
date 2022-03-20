@@ -43,7 +43,6 @@ const Rsvp = () => {
 
     return(
        <section id="rsvp" className={styles.rsvp__section}>
-
         <div className={styles.rsvp__container}>
             <div className={styles.rsvp__leftBar}>
                 <div className={styles.rsvp__formTitle}>
@@ -68,18 +67,22 @@ const Rsvp = () => {
                             <h1 className={styles.rsvp__successMessage}>{successMessage}</h1> }
                     </form>
                 </div>
-
-                <button className={styles.rsvp__register__button} onClick={handleSubmit}> 
-                    Register
-                </button>
+                
+                <div className={styles.rsvp__buttonWrapper}>
+                    <button className={styles.rsvp__register__button} onClick={handleSubmit}> 
+                        Register
+                    </button>
+                </div>
             </div>
 
             <div className={styles.rsvp__rightBar}>
                 <div className={styles.rsvp__venueDetail}>
                     
                     <p>Jun 04 2022</p>
+                    <hr></hr>
                     <p>12:30 Cocktail</p>
                     <p>13:00 Lunch</p>
+                    <hr></hr>
                     <p>E&O Hotel</p>
                     <p>10, Lebuh Farquhar, George Town, 10200 George Town, Pulau Pinang, Malaysia</p>
 

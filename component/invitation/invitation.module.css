@@ -1,0 +1,13 @@
+.invitation__wrapper_mobile{
+    display: none;
+}
+
+@media (max-width: 678px) {
+    .invitation__wrapper {
+        display: none;
+    }
+
+    .invitation__wrapper_mobile{
+        display: block;
+    }
+} 

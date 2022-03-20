@@ -34,3 +34,9 @@
 .ourStory__coupleImg{
     z-index: -1;
 }
+
+@media (max-width: 678px) {
+    .ourStory__imgCard {
+        display: none;
+    }
+}

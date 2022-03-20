@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Linden+Hill:ital@1&display=swap');
-@import 'tailwindcss/tailwind.css';
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -24,4 +23,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+@media (max-width: 678px) {
+  html{
+    width: 678px;
+  }
 }
