@@ -1,16 +1,15 @@
 .countDown__wrapper{
     background-color: rgba(224, 214, 210, 0.884);
-    padding-bottom: 1.6rem;
+    padding: 2rem 0;
 }
 
 .countDown__title{
     text-align: center;
-    padding-top: 1.5rem;
 }
 
 .countDown__title h1{
-    font-size: 1.8rem;
-    margin: 0;
+    font-size: 2.8rem;
+    margin-top: 0;
 }
 
 .countDown__date{
@@ -22,8 +21,8 @@
 
 .dateTime__clusterWrapper{
     border-radius: 0.2rem;
-    height: 120px;
-    width: 100px;
+    height: 140px;
+    width: 120px;
     background-color: rgba(114, 84, 26, 0.7);
     margin: 0 0.5rem;
     display: flex;
@@ -36,7 +35,7 @@
 }
 
 .dateTime__wrapper p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0 0 1rem 0;
 }
 
@@ -46,6 +45,7 @@
 
 .dateTime_indicator{
     color: #FEFDFA;
+    font-size: 1.5rem; 
 }
 
 /* Media query */
@@ -62,5 +62,25 @@
         background-color: rgba(224, 214, 210, 0.884);
         border-radius: 0.2rem;
         margin: auto;
+    }
+
+    .countDown__title h1{
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .dateTime__clusterWrapper{
+        border-radius: 0.2rem;
+        height: 120px;
+        width: 100px;
+        background-color: rgba(114, 84, 26, 0.7);
+        margin: 0 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dateTime_indicator{
+        font-size: 1.2rem;
     }
 }
