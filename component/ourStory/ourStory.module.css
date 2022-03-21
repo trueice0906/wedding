@@ -11,17 +11,13 @@
    text-align: center;
 }
 
-.ourStory__title h1{
-    font-size: 2rem;
-}
-
 .ourStory__para{
     padding: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .ourStory__para p {
-    font-size: 1.5rem;
+    line-height: 140%;
 }
 
 .ourStory__imgCard{

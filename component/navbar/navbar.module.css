@@ -78,7 +78,7 @@
         height: 3px;
         margin-bottom: 8px;
         position: relative;
-        background: black;
+        background: #72541a;
         border-radius: 3px;
         z-index: 1;
         transform-origin: 5px 0px;
@@ -98,7 +98,7 @@
     .navbar__mobileMenuToggle input:checked ~ span{
         opacity: 1;
         transform: rotate(45deg) translate(-3px, -1px);
-        background: #36383F;
+        background: #72541a;
     }
     .navbar__mobileMenuToggle input:checked ~ span:nth-last-child(3){
         opacity: 0;
@@ -134,9 +134,8 @@
     }
 
     .navbar__mobileMenuToggle input:checked ~ ul{
-        transform: none;
+        transform: none;        
     }
-
 
     .navbar__listText {
         font-size: 2.5rem;

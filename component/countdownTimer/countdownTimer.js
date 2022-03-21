@@ -38,7 +38,7 @@ const CountDownTimer = () => {
     return (
         <div className={`${style.countDown__container}`}>
             <div className={style.countDown__wrapper}>
-                <div className={style.countDown__title}>Our Wedding Day</div>
+                <div className={style.countDown__title}><h1>Our Wedding Day</h1></div>
                 
                 <div className={style.countDown__date}>
                     <div className={style.dateTime__clusterWrapper}>
