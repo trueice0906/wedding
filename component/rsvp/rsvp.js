@@ -48,7 +48,7 @@ const Rsvp = () => {
         <div className={styles.rsvp__container}>
             <div className={styles.rsvp__leftBar}>
                 <div className={styles.rsvp__formTitle}>
-                    <h3>Yes, I'll come</h3>
+                    <h1>Yes, I'll come</h1>
                 </div>
 
                 <div className={styles.rsvp__formWrapper}>
@@ -78,7 +78,7 @@ const Rsvp = () => {
                 
                 <div className={styles.rsvp__buttonWrapper}>
                     <button className={styles.rsvp__register__button} onClick={handleSubmit}> 
-                        Register
+                        <p>Register</p>
                     </button>
                 </div>
             </div>

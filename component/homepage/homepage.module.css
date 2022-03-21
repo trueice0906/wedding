@@ -1,5 +1,10 @@
-.homepage__wrapper{
+/* .homepage__wrapper{
     position: relative;
+} */
+
+
+@media (min-width: 678px) {
+    .homepage__wrapper {
+        position: relative;
+    }
 }
-
-

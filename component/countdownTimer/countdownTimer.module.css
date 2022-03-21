@@ -1,22 +1,16 @@
-.countDown__container {
-    position: absolute;
-    bottom: 7vh;
-    width: 100%;    
-}
-
 .countDown__wrapper{
-    height: 230px;
-    width: 520px;
     background-color: rgba(224, 214, 210, 0.884);
-    border-radius: 0.2rem;
-    margin: auto;
+    padding-bottom: 1.6rem;
 }
 
 .countDown__title{
     text-align: center;
-    color: #72541a;
-    font-size: 1.8rem;
     padding-top: 1.5rem;
+}
+
+.countDown__title h1{
+    font-size: 1.8rem;
+    margin: 0;
 }
 
 .countDown__date{
@@ -55,8 +49,18 @@
 }
 
 /* Media query */
-@media (max-width: 678px) {
+@media (min-width: 678px) {
     .countDown__container{
-        display: none;
+        position: absolute;
+        bottom: 7vh;
+        width: 100%;    
+    }
+
+    .countDown__wrapper{
+        height: 230px;
+        width: 520px;
+        background-color: rgba(224, 214, 210, 0.884);
+        border-radius: 0.2rem;
+        margin: auto;
     }
 }

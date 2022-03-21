@@ -41,19 +41,19 @@ export default function ImageSlide() {
 
     // const [allImages, setAllImages] = useState([])
     
-    const getImagesFromFirebase = async () => {
-        const storage = getStorage();
-        const listRef = ref(storage,'wedding-images');
-        const res = await listAll(listRef);
-        const items = res.items
-        const imagesPromises = items.map(async imageRef => {
-            let url = await getDownloadURL(imageRef);
-            return url;
-        })
+    // const getImagesFromFirebase = async () => {
+    //     const storage = getStorage();
+    //     const listRef = ref(storage,'wedding-images');
+    //     const res = await listAll(listRef);
+    //     const items = res.items
+    //     const imagesPromises = items.map(async imageRef => {
+    //         let url = await getDownloadURL(imageRef);
+    //         return url;
+    //     })
  
-        const allImages = await Promise.all(imagesPromises);
-        return allImages;
-    }
+    //     const allImages = await Promise.all(imagesPromises);
+    //     return allImages;
+    // }
 
     // useEffect(async ()=> {
     //     const images = await getImagesFromFirebase();
@@ -63,7 +63,7 @@ export default function ImageSlide() {
     useEffect(() => {
         setNav1(slider1);
         setNav2(slider2);
-    })
+    }, [slider1, slider2])
 
     const settingMain = {
         slidesToShow: 1,
