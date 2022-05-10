@@ -1,34 +1,82 @@
 import styles from "./navbar.module.css"
+import { useEffect, useState } from "react";
+import Link from 'next/link'
+
+const useWindowDimensions = () => {
+    const [windowWidth, setWindowWidth] = useState(undefined);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.screen.width)
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize',handleResize);
+    },[])
+
+    return windowWidth;
+}
 
 const Navbar = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+    const width = useWindowDimensions();
+    console.log(width)
+    const breakpoint = 678;
+
     return(
-            <div className={styles.navbarWrapper}> 
-            {/* mobile menu */}
-                <div className={styles.navbar__mobileMenuToggle}> 
-                    <input type="checkbox"/>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+            <div className={styles.navbarWrapper}>      
 
-                        <ul className={styles.navbar__mobileMenu}>
-                            <li ><a href="#OurStory" className={styles.navbar__listText}>Our story</a></li>
-                            <li><a href="#invitation" className={styles.navbar__listText}>Our wedding</a></li>
-                            <li><a href="#gallery" className={styles.navbar__listText}>Gallery</a></li>
-                            <li><a href="#rsvp" className={styles.navbar__listText}>RSVP</a></li>
+                {width <= breakpoint? (       
+                // {/* mobile menu */}
+                    <div>
+                        <div 
+                            className={`${styles.navbar_hamburgerBtn} ${menuOpen?styles.open:""}`} 
+                            onClick={() => setMenuOpen(!menuOpen)}
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    {menuOpen && 
+                        <ul className={styles.navbar_mobile}>
+                            <Link href="#invitation">
+                                <li 
+                                    onClick={() => setMenuOpen(false)}>
+                                    <a className={styles.navbar__listText}>
+                                        Our wedding</a></li>
+                            </Link>
+
+                            <Link href="#gallery">
+                                <li onClick={() => setMenuOpen(false)}><a href="#gallery" className={styles.navbar__listText}>Gallery</a></li>
+                            </Link>
+
+                            <Link href="#rsvp">
+                                <li onClick={() => setMenuOpen(false)}><a href="#rsvp" className={styles.navbar__listText} >RSVP</a></li>
+                            </Link>
                         </ul>
-                </div>
+                }                
+            </div>
+                ) : (
+                    // browser menu
+                    <ul className={styles.navbar}>
 
-               
-            {/* end of mobile menu */}
-                <ul className={styles.navbar}>
-                    <li><a  href="#OurStory" className={styles.navbar__listText}>Our story</a></li>
-                    <li><a  href="#invitation" className={styles.navbar__listText}>Our wedding</a></li>
-                    <li><a href="#gallery" className={styles.navbar__listText}>Gallery</a></li>
-                    <li><a href="#rsvp"className={styles.navbar__listText} >RSVP</a></li>
-                </ul>
-            </div>   
-     
-    )
-}
+                        <Link href="#invitation">
+                            <li onClick={() => setMenuOpen(false)}><a href="#gallery" className={styles.navbar__listText}>Our wedding</a></li>
+                        </Link>
+
+                        <Link href="#gallery">
+                            <li onClick={() => setMenuOpen(false)}><a href="#gallery" className={styles.navbar__listText}>Gallery</a></li>
+                        </Link>
+
+                        <Link href="#rsvp">
+                            <li onClick={() => setMenuOpen(false)}><a href="#rsvp" className={styles.navbar__listText} >RSVP</a></li>
+                        </Link>
+                    </ul>
+                )
+            }
+        </div>
+    )}
 
 export default Navbar

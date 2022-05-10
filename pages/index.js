@@ -13,7 +13,7 @@ export default function Home() {
         <HomePage />
         <Invitation />
         <Gallery/>
-        <OurStory/>
+        {/* <OurStory/> */}
         <Rsvp/>
       </>
     )

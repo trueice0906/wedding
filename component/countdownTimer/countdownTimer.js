@@ -44,25 +44,25 @@ const CountDownTimer = () => {
                     <div className={style.dateTime__clusterWrapper}>
                         <div className={style.dateTime__wrapper}>
                             <p className={style.dateTime}>{days}</p>
-                            <span className={style.dateTime_indicator}>DAYS</span>
+                            <span className={style.dateTime_indicator}>Days</span>
                         </div>
                     </div>
                     <div className={style.dateTime__clusterWrapper}>
                         <div className={style.dateTime__wrapper}>
                             <p className={style.dateTime}>{hours}</p>
-                            <span className={style.dateTime_indicator}>HOURS</span>
+                            <span className={style.dateTime_indicator}>Hours</span>
                         </div>
                     </div>
                     <div className={style.dateTime__clusterWrapper}>
                     <div className={style.dateTime__wrapper}>
                             <p className={style.dateTime}>{mins}</p>
-                            <span className={style.dateTime_indicator}>MINS</span>
+                            <span className={style.dateTime_indicator}>Mins</span>
                         </div>
                     </div>
                     <div className={style.dateTime__clusterWrapper}>
                     <div className={style.dateTime__wrapper}>
                             <p className={style.dateTime}>{secs}</p>
-                            <span className={style.dateTime_indicator}>SECS</span>
+                            <span className={style.dateTime_indicator}>Secs</span>
                         </div>
                     </div>
                 </div>

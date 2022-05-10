@@ -9,7 +9,6 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick';
 import { useState,useEffect } from 'react';
-// import { getStorage, listAll, ref, getDownloadURL } from 'firebase/storage';
 import galleryPhotos from "../../galleryPhotos/galleryPhotos.json";
 
 
@@ -33,32 +32,10 @@ function NextArrow(props) {
 
 export default function ImageSlide() {
 
-
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     const [slider1, setSlider1] = useState(null);
     const [slider2, setSlider2] = useState(null);
-
-    // const [allImages, setAllImages] = useState([])
-    
-    // const getImagesFromFirebase = async () => {
-    //     const storage = getStorage();
-    //     const listRef = ref(storage,'wedding-images');
-    //     const res = await listAll(listRef);
-    //     const items = res.items
-    //     const imagesPromises = items.map(async imageRef => {
-    //         let url = await getDownloadURL(imageRef);
-    //         return url;
-    //     })
- 
-    //     const allImages = await Promise.all(imagesPromises);
-    //     return allImages;
-    // }
-
-    // useEffect(async ()=> {
-    //     const images = await getImagesFromFirebase();
-    //     setAllImages(images);
-    // },[])
 
     useEffect(() => {
         setNav1(slider1);
