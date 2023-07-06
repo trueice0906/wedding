@@ -1,4 +1,4 @@
-This is the wedding banquet RSVP website built by Next-JS.
+This is a wedding banquet RSVP website built by Next-JS.
 
 First, run the development server:
 
