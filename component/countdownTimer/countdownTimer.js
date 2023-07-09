@@ -8,7 +8,7 @@ const CountDownTimer = () => {
     }
 
     const calculateTimeLeft = () => {
-        const countDownDate = new Date("Jun 04,2022 12:30:00").getTime();
+        const countDownDate = new Date("Jul 07,2026 12:30:00").getTime();
         const now = new Date().getTime();
         let difference = countDownDate-now
         let timeLeft = {}
@@ -35,40 +35,42 @@ const CountDownTimer = () => {
 
     const { days, hours, mins, secs} = timeLeft
 
-    return (
-        <div className={`${style.countDown__container}`}>
-            <div className={style.countDown__wrapper}>
-                <div className={style.countDown__title}><h1>Our Wedding Day</h1></div>
-                
-                <div className={style.countDown__date}>
-                    <div className={style.dateTime__clusterWrapper}>
+    if (days + hours + mins + secs > 0) {
+        return (
+            <div className={`${style.countDown__container}`}>
+                <div className={style.countDown__wrapper}>
+                    <div className={style.countDown__title}><h1>Our Wedding Day</h1></div>
+                    
+                    <div className={style.countDown__date}>
+                        <div className={style.dateTime__clusterWrapper}>
+                            <div className={style.dateTime__wrapper}>
+                                <p className={style.dateTime}>{days}</p>
+                                <span className={style.dateTime_indicator}>Days</span>
+                            </div>
+                        </div>
+                        <div className={style.dateTime__clusterWrapper}>
+                            <div className={style.dateTime__wrapper}>
+                                <p className={style.dateTime}>{hours}</p>
+                                <span className={style.dateTime_indicator}>Hours</span>
+                            </div>
+                        </div>
+                        <div className={style.dateTime__clusterWrapper}>
                         <div className={style.dateTime__wrapper}>
-                            <p className={style.dateTime}>{days}</p>
-                            <span className={style.dateTime_indicator}>Days</span>
+                                <p className={style.dateTime}>{mins}</p>
+                                <span className={style.dateTime_indicator}>Mins</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className={style.dateTime__clusterWrapper}>
+                        <div className={style.dateTime__clusterWrapper}>
                         <div className={style.dateTime__wrapper}>
-                            <p className={style.dateTime}>{hours}</p>
-                            <span className={style.dateTime_indicator}>Hours</span>
-                        </div>
-                    </div>
-                    <div className={style.dateTime__clusterWrapper}>
-                    <div className={style.dateTime__wrapper}>
-                            <p className={style.dateTime}>{mins}</p>
-                            <span className={style.dateTime_indicator}>Mins</span>
-                        </div>
-                    </div>
-                    <div className={style.dateTime__clusterWrapper}>
-                    <div className={style.dateTime__wrapper}>
-                            <p className={style.dateTime}>{secs}</p>
-                            <span className={style.dateTime_indicator}>Secs</span>
+                                <p className={style.dateTime}>{secs}</p>
+                                <span className={style.dateTime_indicator}>Secs</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    } 
 }
 
 export default CountDownTimer;
