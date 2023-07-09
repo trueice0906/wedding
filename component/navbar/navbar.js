@@ -21,7 +21,6 @@ const Navbar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const width = useWindowDimensions();
-    console.log(width)
     const breakpoint = 678;
 
     return(
